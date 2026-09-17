@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRIPVANTA — Beyond Ordinary Travel & Bespoke Expeditions</title>
+  <meta name="description" content="Discover extraordinary luxury travel packages, curated adventures, and hidden escapes with Tripvanta's award-winning bespoke itinerary planning.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans, Syne, Instrument Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="theme-light">
+  <!-- Luxury Framer-Style Site Preloader -->
+  <div class="site-preloader" id="sitePreloader">
+    <div class="preloader-backdrop"></div>
+    <div class="preloader-content">
+      <div class="preloader-logo-wrap">
+        <div class="preloader-compass preloader-img-symbol">
+          <img src="assets/images/logo.png" alt="Roamway Tours Logo" class="preloader-logo-img">
+        </div>
+        <div class="preloader-ring"></div>
+      </div>
+      <div class="preloader-brand">
+        <span>ROAMWAY</span><span class="preloader-dot">.</span>
+      </div>
+      <div class="preloader-tagline">CATCH YOUR DREAMS</div>
+      <div class="preloader-progress-wrap">
+        <div class="preloader-progress-bar" id="preloaderBar"></div>
+      </div>
+      <div class="preloader-counter" id="preloaderPercent">0%</div>
+    </div>
+  </div>
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Smooth Scroll-Driven Parallax Airplane Indicator -->
+  <div class="scroll-parallax-plane-wrap" id="scrollPlaneWrap">
+    <div class="parallax-plane-icon" id="parallaxPlaneIcon">
+      <i class="fa-solid fa-plane"></i>
+    </div>
+    <div class="parallax-contrail" id="parallaxContrail"></div>
+  </div>
+
+  <!-- Floating Circular WhatsApp Icon Widget -->
+  <a href="https://wa.me/" target="_blank" class="floating-whatsapp-circle" title="Chat on WhatsApp" aria-label="WhatsApp Concierge">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with Concierge</span>
+    <span class="whatsapp-online-dot"></span>
+  </a>
+
+  <!-- Background Ambient Glow & Noise Layer -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+  <div class="bg-grid-pattern"></div>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-symbol logo-img-symbol">
+          <img src="assets/images/logo.png" alt="Roamway Tours" class="brand-logo-img">
+        </div>
+        <span class="brand-name">ROAMWAY<span class="dot">.</span></span>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="#destinations" class="nav-link">Packages</a></li>
+          <li><a href="packages.html" class="nav-link">About Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="currency-btn" id="currencyToggle" title="Currency Selector">
+          <i class="fa-solid fa-globe"></i>
+          <span>USD ($)</span>
+        </button>
+        <a href="https://wa.me/" target="_blank" class="whatsapp-btn">
+          <i class="fa-brands fa-whatsapp fa-lg"></i>
+          <span>WhatsApp Desk</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-content">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-link">Home</a></li>
+        <li><a href="#destinations" class="mobile-link">Packages</a></li>
+        <li><a href="packages.html" class="mobile-link">About Us</a></li>
+      </ul>
+      <div class="mobile-drawer-cta">
+        <a href="https://wa.me/" target="_blank" class="btn-primary w-full text-center">Plan My Trip</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION WITH AUTOPLAY CINEMATIC VIDEO & MULTI-LAYER FLOATING PICTURES -->
+    <section class="hero-section" id="heroSection">
+      
+      <!-- Autoplay Video Background Layer with Cinematic Overlay -->
+      <div class="hero-video-wrapper">
+        <video id="heroBgVideo" autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop">
+          <source src="assets/videos/hero-travel.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay"></div>
+        <div class="hero-video-gradient-bottom"></div>
+      </div>
+
+
+
+      <!-- Animated Airplane Flight Path Loop -->
+      <div class="airplane-flight-track">
+        <svg class="flight-svg-path" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="flightPath" d="M 50 350 Q 300 80, 600 220 T 1150 100" stroke="rgba(229, 184, 105, 0.4)" stroke-width="2.5" stroke-dasharray="8 8" />
+        </svg>
+        <div class="flight-plane" id="flightPlane">
+          <i class="fa-solid fa-plane-departure"></i>
+        </div>
+        <div class="flight-pin pin-start"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="flight-pin pin-end"><i class="fa-solid fa-location-dot"></i></div>
+      </div>
+
+      <div class="hero-container">
+        
+        <!-- Center Hero Typography & Subheading -->
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-in-up">
+            <span style="color:#eab308;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <strong>4.9/5 Rating</strong>
+            <span style="color:#94a3b8;">•</span>
+            <span>Trusted by 14,000+ Journeys</span>
+          </div>
+          
+          <h1 class="hero-title animate-title">
+            <span class="title-line">Discover Your Next</span>
+            <span class="title-line highlight-serif">Great Adventure</span>
+          </h1>
+
+          <p class="hero-subtitle animate-fade-in-up delay-2">
+            Catch your dreams with curated holiday packages, flight & train tickets, express visa facilitation, MEA apostille attestation, and luxury boutique stays.
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group animate-fade-in-up delay-3">
+            <a href="#destinations" class="btn-primary btn-large">
+              <span>Explore Holidays</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Hero Live Stat Bar -->
+          <div class="hero-live-stats animate-fade-in-up delay-4">
+            <div class="stat-item">
+              <div class="stat-number"><span class="counter" data-target="150">0</span>+</div>
+              <div class="stat-label">Destinations</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number"><span class="counter" data-target="10">0</span>k+</div>
+              <div class="stat-label">Happy Travellers</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number"><span class="counter" data-target="98">0</span>%</div>
+              <div class="stat-label">Visa Approval</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FLOATING PICTURES & 3D PARALLAX CARDS LAYER -->
+        <div class="floating-scene" id="floatingScene">
+          
+          <!-- Floating Card 1: Top Left - Amalfi Coast Sunlit Polaroid -->
+          <div class="floating-card float-anim-1 parallax-item card-amalfi" data-speed="2.5" data-rotate="-6">
+            <div class="card-inner glass-card">
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=600&auto=format&fit=crop" alt="Amalfi Coast, Italy" loading="eager">
+                <span class="location-tag"><i class="fa-solid fa-location-dot"></i> Positano, Amalfi</span>
+              </div>
+              <div class="card-meta">
+                <div class="card-title">Cliffside Villa Escape</div>
+                <div class="card-price"><span class="price-from">From</span> $2,480 <span class="per-person">/ person</span></div>
+              </div>
+              <div class="card-badge-pinned">
+                <i class="fa-solid fa-star"></i> 4.98
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Card 2: Top Right - Swiss Alps Daylight Polaroid -->
+          <div class="floating-card float-anim-2 parallax-item card-alps" data-speed="-2.0" data-rotate="8">
+            <div class="card-inner glass-card">
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=600&auto=format&fit=crop" alt="Zermatt, Switzerland" loading="eager">
+                <span class="location-tag"><i class="fa-solid fa-mountain"></i> Matterhorn, Swiss Alps</span>
+              </div>
+              <div class="card-meta">
+                <div class="card-title">Heliskiing & Glacier Chalet</div>
+                <div class="card-price"><span class="price-from">From</span> $3,850</div>
+              </div>
+              <div class="floating-sticker">HOT ⚡</div>
+            </div>
+          </div>
+
+          <!-- Floating Card 3: Mid-Left - Kyoto Bamboo Sanctuary -->
+          <div class="floating-card float-anim-3 parallax-item card-kyoto" data-speed="1.8" data-rotate="4">
+            <div class="card-inner glass-card compact-card">
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=500&auto=format&fit=crop" alt="Kyoto, Japan" loading="eager">
+              </div>
+              <div class="card-compact-details">
+                <div class="pill-category">Zen Culture</div>
+                <h4>Kyoto Tea Pavilion</h4>
+                <div class="mini-rating"><i class="fa-solid fa-star"></i> 5.0 (340 reviews)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Card 4: Mid-Right - Sunlit Maldives Lagoon -->
+          <div class="floating-card float-anim-4 parallax-item card-maldives" data-speed="-3.2" data-rotate="-10">
+            <div class="card-inner glass-card">
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600&auto=format&fit=crop" alt="Maldives Overwater Resort" loading="eager">
+                <span class="location-tag"><i class="fa-solid fa-umbrella-beach"></i> Baa Atoll, Maldives</span>
+              </div>
+              <div class="card-meta">
+                <div class="card-title">Overwater Coral Lagoon</div>
+                <div class="card-price"><span class="price-from">From</span> $4,200</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Micro-Badge 1: Active Travelers Badge -->
+          <div class="floating-badge-widget float-anim-badge-1 parallax-item badge-travelers" data-speed="3.0">
+            <div class="avatar-stack">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=120&auto=format&fit=crop" alt="Traveler 1">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop" alt="Traveler 2">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=120&auto=format&fit=crop" alt="Traveler 3">
+            </div>
+            <div class="badge-text">
+              <strong>840+ Travelers</strong>
+              <span>Exploring Live Now</span>
+            </div>
+          </div>
+
+          <!-- Floating Micro-Badge 2: MEA Apostille & Government Verified -->
+          <div class="floating-badge-widget float-anim-badge-2 parallax-item badge-passport" data-speed="-2.4">
+            <div class="passport-icon-wrap" style="color:#059669; background:#ecfdf5; border-color:#a7f3d0;">
+              <i class="fa-solid fa-stamp"></i>
+            </div>
+            <div class="badge-text">
+              <strong style="color:#0f172a;">MEA Apostille Ready</strong>
+              <span style="color:#059669; font-weight:700;">Government Verified</span>
+            </div>
+          </div>
+
+          <!-- Floating Passport Stamp Decor -->
+          <div class="floating-stamp float-anim-stamp parallax-item" data-speed="1.2">
+            <div class="stamp-circle">
+              <span>ROAMWAY</span>
+              <strong>PASSPORT VERIFIED</strong>
+              <span>★ 2026 EDITION ★</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- FLOATING GLASSMORPHIC BOOKING SEARCH BAR WITH CUSTOM INTERACTIVE DROPDOWNS -->
+      <div class="hero-booking-dock" id="booking-section">
+        <form class="glass-booking-bar" id="bookingSearchForm" onsubmit="event.preventDefault();">
+          
+          <!-- Custom Dropdown 1: Destination -->
+          <div class="booking-field custom-dropdown-wrap" id="destDropdownWrap">
+            <div class="field-icon"><i class="fa-solid fa-location-dot" style="color:#eab308;"></i></div>
+            <div class="field-content dropdown-trigger" id="destTrigger" onclick="toggleCustomDropdown('destDropdown')">
+              <label>DESTINATION</label>
+              <div class="selected-val-wrap">
+                <span class="selected-text" id="selectedDestText">Where to? (e.g. Kashmir, Europe, Bali)</span>
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+              </div>
+            </div>
+
+            <!-- Custom Dropdown Menu -->
+            <div class="custom-dropdown-panel" id="destDropdown">
+              <div class="dropdown-search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="destSearchInput" placeholder="Search country, city, or haven..." oninput="filterDestList(this.value)">
+              </div>
+              <div class="dropdown-quick-tags">
+                <button type="button" class="d-tag active" onclick="selectDest('all', 'Where to? (All Destinations)')">All</button>
+                <button type="button" class="d-tag" onclick="selectDest('kashmir', 'Kashmir Valley & Gulmarg')">Kashmir</button>
+                <button type="button" class="d-tag" onclick="selectDest('alps', 'Swiss Alps & Dolomites')">Swiss Alps</button>
+                <button type="button" class="d-tag" onclick="selectDest('amalfi', 'Amalfi Coast, Italy')">Amalfi</button>
+                <button type="button" class="d-tag" onclick="selectDest('maldives', 'Private Atoll, Maldives')">Maldives</button>
+              </div>
+              <ul class="dropdown-options-list" id="destOptionsList">
+                <li class="dropdown-opt-item" onclick="selectDest('all', 'Where to? (All Destinations)')">
+                  <div class="opt-icon"><i class="fa-solid fa-globe"></i></div>
+                  <div class="opt-info">
+                    <strong>All Curated Destinations</strong>
+                    <span>Explore 150+ global havens & expeditions</span>
+                  </div>
+                  <span class="opt-badge">150+</span>
+                </li>
+                <li class="dropdown-opt-item" onclick="selectDest('amalfi', 'Amalfi Coast & Positano, Italy')">
+                  <div class="opt-icon"><i class="fa-solid fa-sun"></i></div>
+                  <div class="opt-info">
+                    <strong>Amalfi Coast & Positano</strong>
+                    <span>Italy • Mediterranean Cliffside Villa</span>
+                  </div>
+                  <span class="opt-badge gold">Popular</span>
+                </li>
+                <li class="dropdown-opt-item" onclick="selectDest('alps', 'Swiss Alps & Dolomites, Switzerland')">
+                  <div class="opt-icon"><i class="fa-solid fa-mountain"></i></div>
+                  <div class="opt-info">
+                    <strong>Swiss Alps & Dolomites</strong>
+                    <span>Switzerland • Glacier Chalets & Skiing</span>
+                  </div>
+                  <span class="opt-badge">Top Rated</span>
+                </li>
+                <li class="dropdown-opt-item" onclick="selectDest('kyoto', 'Kyoto & Tokyo Sanctuary, Japan')">
+                  <div class="opt-icon"><i class="fa-solid fa-torii-gate"></i></div>
+                  <div class="opt-info">
+                    <strong>Kyoto & Tokyo</strong>
+                    <span>Japan • Ancient Shrines & Onsen</span>
+                  </div>
+                  <span class="opt-badge green">Visa-Free</span>
+                </li>
+                <li class="dropdown-opt-item" onclick="selectDest('maldives', 'Private Atoll & Lagoon, Maldives')">
+                  <div class="opt-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+                  <div class="opt-info">
+                    <strong>Maldives Private Island</strong>
+                    <span>Indian Ocean • Overwater Coral Sanctuary</span>
+                  </div>
+                  <span class="opt-badge gold">Luxe</span>
+                </li>
+                <li class="dropdown-opt-item" onclick="selectDest('safari', 'Serengeti Migration, Tanzania')">
+                  <div class="opt-icon"><i class="fa-solid fa-paw"></i></div>
+                  <div class="opt-info">
+                    <strong>Serengeti Safari</strong>
+                    <span>Tanzania • Great Migration Tents</span>
+                  </div>
+                  <span class="opt-badge">Wild</span>
+                </li>
+                <li class="dropdown-opt-item" onclick="selectDest('cappadocia', 'Cappadocia Balloons, Turkey')">
+                  <div class="opt-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                  <div class="opt-info">
+                    <strong>Cappadocia Hot Air Balloons</strong>
+                    <span>Turkey • Cave Suite & Sunrise Flight</span>
+                  </div>
+                  <span class="opt-badge green">Trending</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="booking-separator"></div>
+
+          <!-- Custom Dropdown 2: Departure Month -->
+          <div class="booking-field custom-dropdown-wrap" id="monthDropdownWrap">
+            <div class="field-icon"><i class="fa-solid fa-calendar-check" style="color:#0284c7;"></i></div>
+            <div class="field-content dropdown-trigger" id="monthTrigger" onclick="toggleCustomDropdown('monthDropdown')">
+              <label>DEPARTURE MONTH</label>
+              <div class="selected-val-wrap">
+                <span class="selected-text" id="selectedMonthText">Next 30 Days (Immediate)</span>
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+              </div>
+            </div>
+
+            <!-- Custom Month Dropdown Menu -->
+            <div class="custom-dropdown-panel" id="monthDropdown">
+              <div class="dropdown-panel-header">
+                <strong>Select Travel Window</strong>
+                <span>Flexible date guarantee</span>
+              </div>
+              <ul class="dropdown-options-list">
+                <li class="dropdown-opt-item active" onclick="selectMonth('Next 30 Days (Immediate)')">
+                  <div class="opt-icon"><i class="fa-solid fa-bolt"></i></div>
+                  <div class="opt-info">
+                    <strong>Next 30 Days (Immediate)</strong>
+                    <span>Express departures with fast-track visa</span>
+                  </div>
+                  <span class="opt-badge green">Instant</span>
+                </li>
+                <li class="dropdown-opt-item" onclick="selectMonth('October 2026 (Autumn Season)')">
+                  <div class="opt-icon"><i class="fa-solid fa-leaf"></i></div>
+                  <div class="opt-info">
+                    <strong>October 2026</strong>
+                    <span>Golden Autumn & European Wine Harvest</span>
+                  </div>
+                </li>
+                <li class="dropdown-opt-item" onclick="selectMonth('November 2026 (Tropical Escapes)')">
+                  <div class="opt-icon"><i class="fa-solid fa-sun"></i></div>
+                  <div class="opt-info">
+                    <strong>November 2026</strong>
+                    <span>Perfect Maldives & Middle East Weather</span>
+                  </div>
+                </li>
+                <li class="dropdown-opt-item" onclick="selectMonth('December 2026 (Winter Snow & Holiday)')">
+                  <div class="opt-icon"><i class="fa-solid fa-snowflake"></i></div>
+                  <div class="opt-info">
+                    <strong>December 2026</strong>
+                    <span>Holiday Alpine Skiing & New Year Galas</span>
+                  </div>
+                  <span class="opt-badge gold">Peak</span>
+                </li>
+                <li class="dropdown-opt-item" onclick="selectMonth('Spring 2027 (Cherry Blossom)')">
+                  <div class="opt-icon"><i class="fa-solid fa-seedling"></i></div>
+                  <div class="opt-info">
+                    <strong>Spring 2027</strong>
+                    <span>Japan Cherry Blossoms & Mediterranean Spring</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="booking-separator"></div>
+
+          <!-- Custom Dropdown 3: Service Selection -->
+          <div class="booking-field custom-dropdown-wrap" id="serviceDropdownWrap">
+            <div class="field-icon"><i class="fa-solid fa-compass" style="color:#059669;"></i></div>
+            <div class="field-content dropdown-trigger" id="serviceTrigger" onclick="toggleCustomDropdown('serviceDropdown')">
+              <label>SERVICE</label>
+              <div class="selected-val-wrap">
+                <span class="selected-text" id="selectedServiceText">Tour Packages</span>
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+              </div>
+            </div>
+
+            <!-- Custom Service Dropdown Menu -->
+            <div class="custom-dropdown-panel" id="serviceDropdown">
+              <div class="dropdown-panel-header">
+                <strong>Select Service Category</strong>
+                <span>All services include concierge dispatch</span>
+              </div>
+              <ul class="dropdown-options-list">
+                <li class="dropdown-opt-item active" onclick="selectService('tour', 'Tour Packages')">
+                  <div class="opt-icon"><i class="fa-solid fa-suitcase-rolling"></i></div>
+                  <div class="opt-info">
+                    <strong>Tour Packages</strong>
+                    <span>Handcrafted 5★ all-inclusive itineraries</span>
+                  </div>
+                  <span class="opt-badge gold">Popular</span>
+                </li>
+                <li class="dropdown-opt-item" onclick="selectService('visa', 'Visa & MEA Apostille')">
+                  <div class="opt-icon"><i class="fa-solid fa-passport"></i></div>
+                  <div class="opt-info">
+                    <strong>Visa & MEA Apostille</strong>
+                    <span>Certified document stamping & fast-track e-visa</span>
+                  </div>
+                  <span class="opt-badge green">Verified</span>
+                </li>
+                <li class="dropdown-opt-item" onclick="selectService('flight', 'Flight & IRCTC Tickets')">
+                  <div class="opt-icon"><i class="fa-solid fa-plane-up"></i></div>
+                  <div class="opt-info">
+                    <strong>Flight & Train Tickets</strong>
+                    <span>Authorized Tatkal desk & private charters</span>
+                  </div>
+                </li>
+                <li class="dropdown-opt-item" onclick="selectService('stays', 'Luxury Stays & Villas')">
+                  <div class="opt-icon"><i class="fa-solid fa-hotel"></i></div>
+                  <div class="opt-info">
+                    <strong>Luxury Stays & Villas</strong>
+                    <span>Private overwater chalets & cliffside suites</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Functional Search Button -->
+          <button type="button" class="booking-search-btn" id="searchTripsBtn" onclick="executeSearchTrips()">
+            <span>Find Trips</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <!-- Trust Badges below search bar -->
+        <div class="hero-trust-row">
+          <span><i class="fa-solid fa-shield-halved"></i> Best Price Guarantee</span>
+          <span><i class="fa-solid fa-train"></i> IRCTC Tatkal Authorized Desk</span>
+          <span><i class="fa-solid fa-certificate"></i> MEA India Stamping</span>
+          <span><i class="fa-solid fa-headset"></i> 24/7 Human Dispatch</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- LUXURY BRAND & MEDIA PARTNERS TICKER -->
+    <section class="partners-marquee-section">
+      <div class="marquee-tag">FEATURED IN & PREFERRED PARTNERS</div>
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span class="marquee-item"><i class="fa-solid fa-crown"></i> FOUR SEASONS</span>
+          <span class="marquee-item"><i class="fa-solid fa-plane-departure"></i> EMIRATES FIRST</span>
+          <span class="marquee-item"><i class="fa-solid fa-shield"></i> AMAN RESORTS</span>
+          <span class="marquee-item"><i class="fa-solid fa-award"></i> CONDÉ NAST TRAVELER</span>
+          <span class="marquee-item"><i class="fa-solid fa-compass"></i> NATIONAL GEOGRAPHIC EXPEDITIONS</span>
+          <span class="marquee-item"><i class="fa-solid fa-gem"></i> THE LEADING HOTELS OF THE WORLD</span>
+          <span class="marquee-item"><i class="fa-solid fa-anchor"></i> RITZ-CARLTON YACHT COLLECTION</span>
+        </div>
+        <!-- Cloned for infinite loop -->
+        <div class="marquee-content" aria-hidden="true">
+          <span class="marquee-item"><i class="fa-solid fa-crown"></i> FOUR SEASONS</span>
+          <span class="marquee-item"><i class="fa-solid fa-plane-departure"></i> EMIRATES FIRST</span>
+          <span class="marquee-item"><i class="fa-solid fa-shield"></i> AMAN RESORTS</span>
+          <span class="marquee-item"><i class="fa-solid fa-award"></i> CONDÉ NAST TRAVELER</span>
+          <span class="marquee-item"><i class="fa-solid fa-compass"></i> NATIONAL GEOGRAPHIC EXPEDITIONS</span>
+          <span class="marquee-item"><i class="fa-solid fa-gem"></i> THE LEADING HOTELS OF THE WORLD</span>
+          <span class="marquee-item"><i class="fa-solid fa-anchor"></i> RITZ-CARLTON YACHT COLLECTION</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURATED DESTINATIONS BENTO GRID -->
+    <section class="destinations-section" id="destinations">
+      <div class="section-container">
+        
+        <div class="section-header-wrap">
+          <div class="section-badge"><i class="fa-solid fa-map-pin"></i> 2026 TOP CURATIONS</div>
+          <h2 class="section-title">Handcrafted Destinations Designed for Wonder</h2>
+          <p class="section-desc">Each journey is meticulously planned with private aviation, 5-star bespoke accommodations, and unscripted local discoveries.</p>
+        </div>
+
+        <!-- Destination Filter Pills -->
+        <div class="filter-pills-bar">
+          <button class="filter-pill active" data-filter="all">All Havens (12)</button>
+          <button class="filter-pill" data-filter="alpine">Alpine & Snow</button>
+          <button class="filter-pill" data-filter="island">Islands & Lagoons</button>
+          <button class="filter-pill" data-filter="cultural">Cultural & Historic</button>
+          <button class="filter-pill" data-filter="wild">Wild & Safari</button>
+        </div>
+
+        <!-- Bento Grid Layout -->
+        <div class="bento-grid" id="destinationsGrid">
+          
+          <!-- Bento Card 1 (Large Feature Card) -->
+          <div class="bento-card bento-large card-interactive" data-category="island" data-id="santorini">
+            <div class="bento-img-container">
+              <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1000&auto=format&fit=crop" alt="Santorini Caldera, Greece" loading="lazy">
+              <div class="img-overlay-gradient"></div>
+            </div>
+            <div class="bento-top-badges">
+              <span class="pill-luxe"><i class="fa-solid fa-star"></i> Featured of the Month</span>
+              <span class="pill-duration"><i class="fa-regular fa-clock"></i> 8 Days / 7 Nights</span>
+            </div>
+            <div class="bento-content">
+              <div class="destination-geo"><i class="fa-solid fa-location-dot"></i> Santorini & Mykonos, Greece</div>
+              <h3 class="bento-title">Aegean Sunset Caldera & Private Yacht Regatta</h3>
+              <p class="bento-snippet">Cliffside infinity suites in Oia with private helicopter transfer to secluded cycladic islets.</p>
+              <div class="bento-footer">
+                <div class="price-box">
+                  <span class="label">Total Experience</span>
+                  <span class="price">$3,450 <span>/ guest</span></span>
+                </div>
+                <button class="btn-quick-book" onclick="openTripModal('santorini')">
+                  <span>View Details</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 2 (Vertical Card) -->
+          <div class="bento-card bento-tall card-interactive" data-category="alpine" data-id="alps">
+            <div class="bento-img-container">
+              <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop" alt="Dolomites, Italy" loading="lazy">
+              <div class="img-overlay-gradient"></div>
+            </div>
+            <div class="bento-top-badges">
+              <span class="pill-duration"><i class="fa-regular fa-clock"></i> 6 Days</span>
+            </div>
+            <div class="bento-content">
+              <div class="destination-geo"><i class="fa-solid fa-mountain"></i> Dolomites & Cortina, Italy</div>
+              <h3 class="bento-title">Alpine High-Peaks & Michelin Gourmet Tour</h3>
+              <p class="bento-snippet">Private glass chalet with panoramic mountain sauna and summit heli-drop.</p>
+              <div class="bento-footer">
+                <div class="price-box">
+                  <span class="label">Starting at</span>
+                  <span class="price">$2,900</span>
+                </div>
+                <button class="btn-quick-book" onclick="openTripModal('alps')">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 3 (Standard Card) -->
+          <div class="bento-card card-interactive" data-category="cultural" data-id="kyoto">
+            <div class="bento-img-container">
+              <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800&auto=format&fit=crop" alt="Tokyo & Kyoto Japan" loading="lazy">
+              <div class="img-overlay-gradient"></div>
+            </div>
+            <div class="bento-top-badges">
+              <span class="pill-duration"><i class="fa-regular fa-clock"></i> 10 Days</span>
+            </div>
+            <div class="bento-content">
+              <div class="destination-geo"><i class="fa-solid fa-torii-gate"></i> Kyoto & Hakone, Japan</div>
+              <h3 class="bento-title">Ancient Shrines, Onsen Sanctuary & Tea Rituals</h3>
+              <div class="bento-footer">
+                <div class="price-box">
+                  <span class="price">$4,120</span>
+                </div>
+                <button class="btn-quick-book" onclick="openTripModal('kyoto')">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 4 (Standard Card) -->
+          <div class="bento-card card-interactive" data-category="wild" data-id="safari">
+            <div class="bento-img-container">
+              <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=800&auto=format&fit=crop" alt="Serengeti Safari" loading="lazy">
+              <div class="img-overlay-gradient"></div>
+            </div>
+            <div class="bento-top-badges">
+              <span class="pill-duration"><i class="fa-regular fa-clock"></i> 7 Days</span>
+            </div>
+            <div class="bento-content">
+              <div class="destination-geo"><i class="fa-solid fa-paw"></i> Serengeti & Ngorongoro, Tanzania</div>
+              <h3 class="bento-title">The Great Migration & Starlit Luxury Tents</h3>
+              <div class="bento-footer">
+                <div class="price-box">
+                  <span class="price">$5,250</span>
+                </div>
+                <button class="btn-quick-book" onclick="openTripModal('safari')">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 5 (Wide Feature Card) -->
+          <div class="bento-card bento-wide card-interactive" data-category="island" data-id="maldives">
+            <div class="bento-img-container">
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1000&auto=format&fit=crop" alt="Maldives Private Island" loading="lazy">
+              <div class="img-overlay-gradient"></div>
+            </div>
+            <div class="bento-top-badges">
+              <span class="pill-luxe"><i class="fa-solid fa-crown"></i> Ultra VIP</span>
+              <span class="pill-duration"><i class="fa-regular fa-clock"></i> 9 Days</span>
+            </div>
+            <div class="bento-content">
+              <div class="destination-geo"><i class="fa-solid fa-water"></i> Noonu Atoll, Maldives</div>
+              <h3 class="bento-title">Private Island Sanctuary with Bio-Luminescent Reef Dive</h3>
+              <p class="bento-snippet">Exclusive water villa with 24h butler, private chef, underwater wine cellar, and sea plane transfer.</p>
+              <div class="bento-footer">
+                <div class="price-box">
+                  <span class="label">Starting at</span>
+                  <span class="price">$6,400 <span>/ guest</span></span>
+                </div>
+                <button class="btn-quick-book" onclick="openTripModal('maldives')">
+                  <span>View Sanctuary</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 6 (Cappadocia Hot Air Balloons) -->
+          <div class="bento-card card-interactive" data-category="cultural" data-id="cappadocia">
+            <div class="bento-img-container">
+              <img src="https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=800&auto=format&fit=crop" alt="Cappadocia Hot Air Balloons" loading="lazy">
+              <div class="img-overlay-gradient"></div>
+            </div>
+            <div class="bento-top-badges">
+              <span class="pill-duration"><i class="fa-regular fa-clock"></i> 5 Days</span>
+            </div>
+            <div class="bento-content">
+              <div class="destination-geo"><i class="fa-solid fa-cloud-sun"></i> Goreme & Fairy Chimneys, Turkey</div>
+              <h3 class="bento-title">Sunrise Hot Air Balloon Flight & Cave Suite</h3>
+              <div class="bento-footer">
+                <div class="price-box">
+                  <span class="price">$2,350</span>
+                </div>
+                <button class="btn-quick-book" onclick="openTripModal('cappadocia')">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE BESPOKE TRIP PLANNER / ESTIMATOR -->
+    <section class="planner-section" id="planner">
+      <div class="section-container">
+        <div class="planner-wrapper glass-card">
+          <div class="planner-header">
+            <div class="section-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> INTERACTIVE ESTIMATOR</div>
+            <h2 class="section-title text-center">Design Your Bespoke Expedition</h2>
+            <p class="section-desc text-center">Customize every dimension of your journey with instant transparent pricing and concierge allocation.</p>
+          </div>
+
+          <div class="planner-grid">
+            <!-- Step 1: Destination Region -->
+            <div class="planner-option-group">
+              <label class="option-title"><span class="step-num">1</span> Select Region</label>
+              <div class="option-cards-row" id="regionSelector">
+                <button type="button" class="choice-card active" data-region="mediterranean" data-multiplier="1.15">
+                  <i class="fa-solid fa-sun"></i>
+                  <span>Mediterranean</span>
+                </button>
+                <button type="button" class="choice-card" data-region="alps" data-multiplier="1.25">
+                  <i class="fa-solid fa-mountain"></i>
+                  <span>Swiss Alps</span>
+                </button>
+                <button type="button" class="choice-card" data-region="asia" data-multiplier="1.0">
+                  <i class="fa-solid fa-seedling"></i>
+                  <span>East Asia</span>
+                </button>
+                <button type="button" class="choice-card" data-region="tropics" data-multiplier="1.4">
+                  <i class="fa-solid fa-umbrella-beach"></i>
+                  <span>Tropics / Maldives</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Duration Slider -->
+            <div class="planner-option-group">
+              <div class="slider-header">
+                <label class="option-title"><span class="step-num">2</span> Journey Duration</label>
+                <span class="slider-value-display" id="durationValue">7 Days</span>
+              </div>
+              <input type="range" class="custom-range" id="durationSlider" min="3" max="21" value="7" step="1">
+              <div class="range-labels">
+                <span>3 Days</span>
+                <span>7 Days</span>
+                <span>14 Days</span>
+                <span>21 Days</span>
+              </div>
+            </div>
+
+            <!-- Step 3: Luxury Tier -->
+            <div class="planner-option-group">
+              <label class="option-title"><span class="step-num">3</span> Accommodation & Travel Tier</label>
+              <div class="tier-cards-row" id="tierSelector">
+                <button type="button" class="tier-card" data-tier="luxury" data-base="380">
+                  <div class="tier-icon"><i class="fa-solid fa-hotel"></i></div>
+                  <div class="tier-info">
+                    <strong>5★ Boutique & Suites</strong>
+                    <span>Chauffeur, 5★ resorts, private tours</span>
+                  </div>
+                </button>
+                <button type="button" class="tier-card active" data-tier="ultra" data-base="650">
+                  <div class="tier-badge-recommended">POPULAR</div>
+                  <div class="tier-icon"><i class="fa-solid fa-crown"></i></div>
+                  <div class="tier-info">
+                    <strong>Ultra-Luxe & Villas</strong>
+                    <span>Private villas, VIP fast-track, yacht days</span>
+                  </div>
+                </button>
+                <button type="button" class="tier-card" data-tier="presidential" data-base="1100">
+                  <div class="tier-icon"><i class="fa-solid fa-plane-up"></i></div>
+                  <div class="tier-info">
+                    <strong>Presidential & Private Jet</strong>
+                    <span>Private aviation, full security, 24h butler</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 4: Add-on Experiences -->
+            <div class="planner-option-group">
+              <label class="option-title"><span class="step-num">4</span> Bespoke Add-ons</label>
+              <div class="addons-grid" id="addonsSelector">
+                <label class="addon-checkbox-label">
+                  <input type="checkbox" value="350" checked>
+                  <span class="checkbox-box"></span>
+                  <span class="addon-title"><i class="fa-solid fa-helicopter"></i> Scenic Helicopter Transfer (+$350)</span>
+                </label>
+                <label class="addon-checkbox-label">
+                  <input type="checkbox" value="500" checked>
+                  <span class="checkbox-box"></span>
+                  <span class="addon-title"><i class="fa-solid fa-utensils"></i> Michelin-Star Tasting Dinner (+$500)</span>
+                </label>
+                <label class="addon-checkbox-label">
+                  <input type="checkbox" value="850">
+                  <span class="checkbox-box"></span>
+                  <span class="addon-title"><i class="fa-solid fa-ship"></i> Private Sunset Yacht Charter (+$850)</span>
+                </label>
+                <label class="addon-checkbox-label">
+                  <input type="checkbox" value="280">
+                  <span class="checkbox-box"></span>
+                  <span class="addon-title"><i class="fa-solid fa-spa"></i> Full-Day Thermal Spa Sanctuary (+$280)</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Planner Summary & Dynamic Estimate Box -->
+          <div class="planner-summary-footer">
+            <div class="summary-left">
+              <div class="summary-caption">ESTIMATED INVESTMENT (PER TRAVELER)</div>
+              <div class="live-price-wrap">
+                <span class="currency-symbol">$</span>
+                <span class="dynamic-price-number" id="estimatedPrice">5,400</span>
+                <span class="all-inclusive-tag">All-inclusive concierge package</span>
+              </div>
+            </div>
+            <div class="summary-right">
+              <button class="btn-primary btn-large glow-button" id="confirmCustomTripBtn">
+                <span>Request Custom Itinerary</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOATING TRAVEL JOURNAL / STORIES -->
+    <section class="journal-section" id="stories">
+      <div class="section-container">
+        
+        <div class="section-header-wrap">
+          <div class="section-badge"><i class="fa-solid fa-camera"></i> TRAVELER DIARIES</div>
+          <h2 class="section-title">Moments Captured by Our Voyagers</h2>
+          <p class="section-desc">Real stories, authentic captures, and memories etched in the farthest corners of the world.</p>
+        </div>
+
+        <div class="journal-grid">
+          
+          <div class="journal-card story-1">
+            <div class="journal-img-box">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" alt="Tropical Escape">
+              <span class="story-category">MALDIVES</span>
+            </div>
+            <div class="journal-body">
+              <div class="journal-meta">
+                <span class="journal-author"><i class="fa-regular fa-user"></i> Marcus & Elena Vance</span>
+                <span class="journal-date">August 2026</span>
+              </div>
+              <h3>"A private sandbank dinner under a canopy of stars we will never forget."</h3>
+              <p>Tripvanta arranged seamless seaplane connections and an unlisted coral reef snorkeling excursion.</p>
+            </div>
+          </div>
+
+          <div class="journal-card story-2">
+            <div class="journal-img-box">
+              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop" alt="Alpine Peaks">
+              <span class="story-category">SWISS ALPS</span>
+            </div>
+            <div class="journal-body">
+              <div class="journal-meta">
+                <span class="journal-author"><i class="fa-regular fa-user"></i> Sophia Dupont</span>
+                <span class="journal-date">July 2026</span>
+              </div>
+              <h3>"Skiing untouched powder with a private mountain guide and fondue in an igloo."</h3>
+              <p>The attention to detail from the VIP airport pick up to the heated ski gear was unmatched.</p>
+            </div>
+          </div>
+
+          <div class="journal-card story-3">
+            <div class="journal-img-box">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800&auto=format&fit=crop" alt="Kyoto Zen">
+              <span class="story-category">JAPAN</span>
+            </div>
+            <div class="journal-body">
+              <div class="journal-meta">
+                <span class="journal-author"><i class="fa-regular fa-user"></i> David & Kenji Sato</span>
+                <span class="journal-date">June 2026</span>
+              </div>
+              <h3>"Private entrance to Kyoto's ancient bamboo groves before any crowds arrived."</h3>
+              <p>Our personal cultural liaison made every moment feel intimate, sacred, and deeply educational.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS & TRUST PROOF -->
+    <section class="reviews-section" id="reviews">
+      <div class="section-container">
+        
+        <div class="reviews-banner glass-card">
+          <div class="reviews-top-row">
+            <div class="trust-score">
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div class="score-text"><strong>4.98 / 5.0</strong> Over 2,400+ Verified Luxury Reviews</div>
+            </div>
+            <div class="verified-badge">
+              <i class="fa-solid fa-circle-check"></i> 100% Bespoke Guarantee
+            </div>
+          </div>
+
+          <!-- Multi-Card Auto-Sliding Testimonials Carousel -->
+          <div class="testimonials-carousel-wrapper">
+            <div class="testimonials-track" id="testimonialsTrack">
+              
+              <!-- Slide 1 -->
+              <div class="testimonial-slide-card glass-card">
+                <div class="slide-header">
+                  <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                  <div class="stars-mini"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                </div>
+                <p class="quote-text">
+                  "Tripvanta transformed how our family travels. From the private catamaran in Capri to helicopter transfers in Zermatt, every transition was frictionless perfection."
+                </p>
+                <div class="reviewer-info">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop" alt="Lady Victoria Sterling">
+                  <div>
+                    <div class="reviewer-name">Lady Victoria Sterling</div>
+                    <div class="reviewer-title">London, UK • 4 Expeditions Booked</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="testimonial-slide-card glass-card">
+                <div class="slide-header">
+                  <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                  <div class="stars-mini"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                </div>
+                <p class="quote-text">
+                  "The MEA apostille service and fast-track European visa facilitation got our team to Geneva in under 72 hours. Flawless corporate & leisure desk."
+                </p>
+                <div class="reviewer-info">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="Marcus Vance">
+                  <div>
+                    <div class="reviewer-name">Marcus Vance</div>
+                    <div class="reviewer-title">Managing Director, Zurich • Corporate Retreat</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="testimonial-slide-card glass-card">
+                <div class="slide-header">
+                  <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                  <div class="stars-mini"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                </div>
+                <p class="quote-text">
+                  "Our honeymoon in the Maldives and Kyoto felt like stepping inside a movie. 24/7 dedicated WhatsApp concierge answered questions within 30 seconds."
+                </p>
+                <div class="reviewer-info">
+                  <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=150&auto=format&fit=crop" alt="Elena & Julien Moreau">
+                  <div>
+                    <div class="reviewer-name">Elena & Julien Moreau</div>
+                    <div class="reviewer-title">Paris, France • Honeymoon Haven</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="testimonial-slide-card glass-card">
+                <div class="slide-header">
+                  <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                  <div class="stars-mini"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                </div>
+                <p class="quote-text">
+                  "Private Serengeti safari where our guide placed us right in front of the Great Migration crossing. Truly bespoke, safe, and deeply unforgettable."
+                </p>
+                <div class="reviewer-info">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop" alt="David K. Rosenthal">
+                  <div>
+                    <div class="reviewer-name">David K. Rosenthal</div>
+                    <div class="reviewer-title">New York, USA • Safari Expedition</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="testimonial-slide-card glass-card">
+                <div class="slide-header">
+                  <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                  <div class="stars-mini"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                </div>
+                <p class="quote-text">
+                  "Instant Tatkal train confirmations and luxury palace hotel bookings in Kashmir & Rajasthan. Roamway Tours handles every tiny detail like clockwork."
+                </p>
+                <div class="reviewer-info">
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop" alt="Ananya Sharma">
+                  <div>
+                    <div class="reviewer-name">Dr. Ananya Sharma</div>
+                    <div class="reviewer-title">Mumbai, India • Royal Heritage Tour</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Autoslide Controls & Indicators -->
+            <div class="testimonials-controls">
+              <button type="button" class="t-ctrl-btn" id="prevTestimonialBtn" title="Previous Review">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <div class="testimonials-dots" id="testimonialsDots">
+                <button type="button" class="t-dot active" data-index="0"></button>
+                <button type="button" class="t-dot" data-index="1"></button>
+                <button type="button" class="t-dot" data-index="2"></button>
+                <button type="button" class="t-dot" data-index="3"></button>
+                <button type="button" class="t-dot" data-index="4"></button>
+              </div>
+              <button type="button" class="t-ctrl-btn" id="nextTestimonialBtn" title="Next Review">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA HERO BANNER -->
+    <section class="cta-banner-section">
+      <div class="section-container">
+        <div class="cta-box glass-card">
+          <div class="ambient-glow glow-cta"></div>
+          <div class="cta-content">
+            <span class="hero-badge"><i class="fa-solid fa-champagne-glasses"></i> EXCLUSIVE 2026 HORIZONS</span>
+            <h2>Ready to Embark on Your Next Unforgettable Journey?</h2>
+            <p>Speak directly with an expert travel concierge to design a personalized itinerary tailored to your passions.</p>
+            <div class="cta-buttons">
+              <button class="btn-primary btn-large glow-button" onclick="document.getElementById('booking-section').scrollIntoView({behavior: 'smooth'})">
+                <span>Start Planning Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <a href="tel:+18005558747" class="btn-secondary btn-large">
+                <i class="fa-solid fa-phone"></i>
+                <span>+1 (800) 555-TRIP</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-main-grid">
+        
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-symbol logo-img-symbol">
+              <img src="assets/images/logo.png" alt="Roamway Tours" class="brand-logo-img">
+            </div>
+            <span class="brand-name">ROAMWAY<span class="dot">.</span></span>
+          </a>
+          <p class="footer-about">
+            Catch your dreams with curated holiday packages, flight & train ticketing, express visa facilitation, MEA apostille attestation, and luxury boutique stays.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Destinations</h4>
+          <ul>
+            <li><a href="#destinations">Amalfi Coast</a></li>
+            <li><a href="#destinations">Swiss Alps & Zermatt</a></li>
+            <li><a href="#destinations">Kyoto & Tokyo</a></li>
+            <li><a href="#destinations">Maldives Atolls</a></li>
+            <li><a href="#destinations">Patagonia Glaciers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Experiences</h4>
+          <ul>
+            <li><a href="#experiences">Private Aviation</a></li>
+            <li><a href="#experiences">Superyacht Charters</a></li>
+            <li><a href="#experiences">Michelin Gastronomy</a></li>
+            <li><a href="#experiences">Wellness & Spa Havens</a></li>
+            <li><a href="#experiences">Polar Expeditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter-col">
+          <h4>The Voyager Gazette</h4>
+          <p>Subscribe for unlisted private retreats, secret seasonal openings, and VIP invitations.</p>
+          <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletter(event)">
+            <div class="input-wrap">
+              <input type="email" placeholder="Enter your VIP email" required>
+              <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="newsletter-status" id="newsletterStatus"></div>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 TRIPVANTA INC. ALL RIGHTS RESERVED. CRAFTED WITH FRAMER-STYLE MOTION & LUXURY STANDARDS.
+        </div>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Travel Advisory</a>
+          <a href="#">Sustainability Pledge</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TRIP DETAILS MODAL -->
+  <div class="modal-backdrop" id="tripModalBackdrop">
+    <div class="trip-modal glass-card" id="tripModal">
+      <button class="modal-close-btn" id="closeTripModalBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="modal-body" id="modalDynamicContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEO MODAL -->
+  <div class="modal-backdrop" id="videoModalBackdrop">
+    <div class="video-modal-box glass-card">
+      <button class="modal-close-btn" id="closeVideoModalBtn" aria-label="Close video">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="video-wrapper">
+        <div class="video-placeholder-demo">
+          <i class="fa-solid fa-circle-play fa-4x pulse-icon"></i>
+          <h3>Expedition Showcase 2026</h3>
+          <p>Cinematic 4K Showreel: 140+ Uncharted Destinations</p>
+          <div class="video-controls-bar">
+            <span>01:45 / 03:20</span>
+            <div class="progress-bar-mock"><div class="progress-fill"></div></div>
+            <span>4K ULTRA HD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUCCESS TOAST NOTIFICATION -->
+  <div class="toast-notification" id="toastNotification">
+    <div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+    <div class="toast-content">
+      <strong id="toastTitle">Itinerary Saved</strong>
+      <span id="toastDesc">Your custom travel portfolio is being prepared.</span>
+    </div>
+  </div>
+
+  <!-- Main JavaScript Logic & Motion Engine -->
+  <script src="js/app.js"></script>
+</body>
+</html>
