@@ -1960,19 +1960,26 @@ button, input, select {
 
 .bento-top-badges {
   position: absolute;
-  top: 24px;
-  left: 24px;
+  top: 20px;
+  left: 20px;
+  right: 20px;
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
   z-index: 3;
 }
 
-.pill-luxe, .pill-duration {
-  padding: 6px 14px;
+.pill-luxe, .pill-duration, .pill-rating, .pill-urgency {
+  padding: 6px 12px;
   border-radius: 30px;
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 700;
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
 }
 
 .pill-luxe {
@@ -1981,13 +1988,59 @@ button, input, select {
 }
 
 .pill-duration {
-  background: rgba(15, 23, 42, 0.7);
-  color: #fff;
+  background: rgba(15, 23, 42, 0.65);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pill-rating {
+  background: rgba(15, 23, 42, 0.75);
+  color: #fef08a;
+  border: 1px solid rgba(254, 240, 138, 0.25);
+}
+
+.pill-urgency {
+  background: #f43f5e;
+  color: #ffffff;
+  animation: pulseUrgent 2.5s infinite;
+}
+
+@keyframes pulseUrgent {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
 }
 
 .bento-content {
   position: relative;
   z-index: 3;
+}
+
+.bento-inclusions-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.chip-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.chip-item i {
+  color: #fef08a;
+  font-size: 0.7rem;
 }
 
 .destination-geo {
