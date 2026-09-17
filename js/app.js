@@ -226,6 +226,15 @@ function initMouseParallax() {
 
   // Animation frame loop with smooth spring damping combining mouse and scroll physics
   function updateParallax() {
+    if (window.innerWidth <= 860) {
+      // On mobile, reset any stray inline transforms so cards flow cleanly in document normal flow
+      parallaxItems.forEach(item => {
+        item.style.transform = '';
+      });
+      requestAnimationFrame(updateParallax);
+      return;
+    }
+
     currentX += (targetX - currentX) * 0.08;
     currentY += (targetY - currentY) * 0.08;
 
