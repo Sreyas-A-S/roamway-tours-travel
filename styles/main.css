@@ -582,18 +582,21 @@ button, input, select {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #0f172a;
+  background: #25d366;
   color: #ffffff;
   font-size: 0.88rem;
   font-weight: 700;
   padding: 10px 20px;
   border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
   transition: all 0.25s var(--ease-spring);
 }
 
 .whatsapp-btn:hover {
-  background: #1e293b;
+  background: #20ba5a;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
   transform: translateY(-2px);
+  color: #ffffff;
 }
 
 /* Button Styles */
