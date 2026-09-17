@@ -3431,11 +3431,64 @@ button, input, select {
   .bento-grid {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    gap: 20px;
+    gap: 22px;
   }
   .bento-large, .bento-wide, .bento-tall {
     grid-column: span 1;
-    min-height: 360px;
+    min-height: auto;
+  }
+  .bento-card {
+    padding: 20px 18px;
+    min-height: 440px;
+    justify-content: flex-end;
+  }
+  .bento-top-badges {
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    gap: 6px;
+  }
+  .pill-luxe, .pill-duration, .pill-rating, .pill-urgency {
+    padding: 4px 10px;
+    font-size: 0.68rem;
+  }
+  .bento-title {
+    font-size: 1.15rem;
+    line-height: 1.25;
+    margin-bottom: 6px;
+  }
+  .destination-geo {
+    font-size: 0.74rem;
+    margin-bottom: 4px;
+  }
+  .bento-snippet {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .bento-inclusions-chips {
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+  .chip-item {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+  .bento-footer {
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  .price-box .price {
+    font-size: 1.05rem;
+  }
+  .btn-quick-book {
+    padding: 8px 14px;
+    font-size: 0.78rem;
   }
   .option-cards-row {
     grid-template-columns: 1fr;
@@ -3552,6 +3605,22 @@ button, input, select {
   .btn-primary, .btn-secondary {
     font-size: 0.84rem;
     padding: 11px 20px;
+  }
+  .bento-card {
+    min-height: 460px;
+    padding: 16px 14px;
+  }
+  .bento-top-badges {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+  }
+  .bento-title {
+    font-size: 1.08rem;
+    line-height: 1.25;
+  }
+  .bento-inclusions-chips .chip-item:nth-child(n+3) {
+    display: none; /* keep only top 2 key inclusions on ultra-narrow phones */
   }
   .whatsapp-btn span {
     display: none;
